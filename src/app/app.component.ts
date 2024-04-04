@@ -13,8 +13,14 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  shortcuts: BlenderShortcuts[] = [];
+  generalShortcuts: BlenderShortcuts[] = [];
+  editModeShortcuts: BlenderShortcuts[] = [];
   constructor(private readonly shortcutsService: ShortcutsService) {
-    this.shortcuts = this.shortcutsService.getShortcuts();
+    this.generalShortcuts = this.shortcutsService.getGeneralShortcuts();
+    this.editModeShortcuts = this.shortcutsService.getEditModeShortcuts();
+  }
+
+  concatStrings(thing: string): string {
+    return thing + '+';
   }
 }

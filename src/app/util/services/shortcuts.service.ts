@@ -1,12 +1,19 @@
 import { Injectable } from '@angular/core';
 import { BlenderShortcuts } from '../interfaces/blender-shortcuts.interface';
-import { shortcuts } from '../../../assets/shortcuts.const';
+import {
+  editModeShortcuts,
+  generalShortcuts,
+} from '../../../assets/shortcuts.const';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ShortcutsService {
-  getShortcuts(): BlenderShortcuts[] {
-    return shortcuts;
+  getEditModeShortcuts(): BlenderShortcuts[] {
+    return editModeShortcuts;
+  }
+
+  getGeneralShortcuts(): BlenderShortcuts[] {
+    return generalShortcuts;
   }
 }

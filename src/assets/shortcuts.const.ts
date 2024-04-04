@@ -1,12 +1,11 @@
 import { BlenderArea } from '../app/util/enums/blender-area.enum';
 import { BlenderShortcuts } from '../app/util/interfaces/blender-shortcuts.interface';
 
-export const shortcuts: BlenderShortcuts[] = [
-  //Edit
+export const editModeShortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.EditMode],
     title: 'Moving',
-    shortcut: 'G',
+    shortcut: ['G'],
     description: ['Move selected object around'],
     information: ['+X/Y/Z: move along axis', 'no need to click, just select'],
     tags: ['move'],
@@ -14,7 +13,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.EditMode],
     title: 'Rotating',
-    shortcut: 'R',
+    shortcut: ['R'],
     description: ['Rotate selected object'],
     information: ['+X/Y/Z: rotate around axis'],
     tags: ['rotate'],
@@ -22,7 +21,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.EditMode],
     title: 'Scaling',
-    shortcut: 'S',
+    shortcut: ['S'],
     description: ['Scale selected object'],
     information: ['+X/Y/Z: scale along axis'],
     tags: ['scale'],
@@ -30,7 +29,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.EditMode],
     title: 'Triangles to Quads',
-    shortcut: 'Alt J',
+    shortcut: ['Alt', 'J'],
     description: ['Triangles to Quads'],
     information: ['can only be two, less/more wont work'],
     tags: ['triangles', 'quads'],
@@ -38,17 +37,17 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.EditMode],
     title: 'extruding options',
-    shortcut: 'Alt E',
+    shortcut: ['Alt', 'E'],
     description: ['Options for Extruding'],
     information: [],
     tags: ['extrude'],
   },
-
-  //General
+];
+export const generalShortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Common Shortcuts',
-    shortcut: '⇧ ␣',
+    shortcut: ['⇧', '␣'],
     description: ['Open Menu for common Shortcuts'],
     information: [],
     tags: ['menu', 'common'],
@@ -56,7 +55,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Quick Favorites',
-    shortcut: 'Q',
+    shortcut: ['Q'],
     description: ['Open Menu to quickly access favorite actions'],
     information: ['You can add them by ...'],
     tags: ['menu', 'favorite'],
@@ -64,7 +63,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Orbit around Object',
-    shortcut: 'Middle Mouse',
+    shortcut: ['Middle Mouse'],
     description: ['Orbit around an selected object'],
     information: [],
     tags: ['view', 'viewport', 'orbit'],
@@ -72,7 +71,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Move Viewport around',
-    shortcut: '⇧ Middle Mouse',
+    shortcut: ['⇧', 'Middle Mouse'],
     description: ['Orbit around an selected object'],
     information: [],
     tags: ['view', 'viewport', 'move'],
@@ -80,7 +79,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Zoom Viewport',
-    shortcut: 'Scroll Middle Mouse',
+    shortcut: ['Scroll Middle Mouse'],
     description: ['Zoom on an selected object'],
     information: [],
     tags: ['view', 'viewport', 'zoom'],
@@ -88,7 +87,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Viewport to selected',
-    shortcut: 'Numpad .',
+    shortcut: ['. (Numpad)'],
     description: ['Move Viewport to selected'],
     information: [],
     tags: ['view', 'viewport', 'selected'],
@@ -96,7 +95,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Plain Front View',
-    shortcut: 'Numpad 1',
+    shortcut: ['1 (Numpad)'],
     description: ['Viewport to Front View (Plain)'],
     information: [],
     tags: ['view', 'viewport', 'front'],
@@ -104,7 +103,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Plain Side View',
-    shortcut: 'Numpad 3',
+    shortcut: ['3 (Numpad)'],
     description: ['Viewport to Side View (Plain)'],
     information: [],
     tags: ['view', 'viewport', 'side'],
@@ -112,7 +111,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Plain Top View',
-    shortcut: 'Numpad 7',
+    shortcut: ['7 (Numpad)'],
     description: ['Viewport to Top View (Plain)'],
     information: [],
     tags: ['view', 'viewport', 'top'],
@@ -120,7 +119,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Perspective Mode',
-    shortcut: 'Numpad 5',
+    shortcut: ['5 (Numpad)'],
     description: ['Enable/Disabled Perspective Mode'],
     information: [],
     tags: ['perspective'],
@@ -128,7 +127,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Delete selected',
-    shortcut: 'X',
+    shortcut: ['X'],
     description: ['Delete selected'],
     information: [],
     tags: ['delete'],
@@ -136,7 +135,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Relocate selected to center',
-    shortcut: 'Alt G',
+    shortcut: ['Alt', 'G'],
     description: ['Relocate selected to center'],
     information: [],
     tags: ['relocate', 'center'],
@@ -144,7 +143,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'menu for adding Objects',
-    shortcut: '⇧ A',
+    shortcut: ['⇧', 'A'],
     description: ['menu for adding Objects'],
     information: [],
     tags: ['menu', 'adding', 'objects'],
@@ -152,7 +151,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'last action',
-    shortcut: 'F9',
+    shortcut: ['F9'],
     description: ['Bring back last action'],
     information: [],
     tags: ['menu', 'action'],
@@ -160,7 +159,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'show/hide side options/properties',
-    shortcut: 'N',
+    shortcut: ['N'],
     description: ['show/hide side options/properties'],
     information: [],
     tags: ['options', 'properties'],
@@ -168,7 +167,7 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Apply',
-    shortcut: 'Ctrl A',
+    shortcut: ['Ctrl', 'A'],
     description: ['Apply ...'],
     information: ['Its possible to apply scale for scale, transform ...'],
     tags: ['apply'],
@@ -176,9 +175,25 @@ export const shortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Pie Menu',
-    shortcut: 'Ctrl Tab',
+    shortcut: ['Ctrl', 'Tab'],
     description: ['Open Object Pie Menu'],
     information: [],
     tags: ['pie', 'menu'],
+  },
+  {
+    area: [BlenderArea.General],
+    title: 'Group Objects',
+    shortcut: ['M'],
+    description: ['Group selected Objects'],
+    information: ["actually called 'Collection'"],
+    tags: ['group', 'collection'],
+  },
+  {
+    area: [BlenderArea.General],
+    title: 'Create Parent Group',
+    shortcut: ['Ctrl', 'P'],
+    description: ['Create a Parent Group of selected Objects'],
+    information: ['active selected Object is the Parent'],
+    tags: ['group', 'parent'],
   },
 ];

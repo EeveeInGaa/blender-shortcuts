@@ -3,12 +3,52 @@
   <app-search></app-search>
 </header>
 
-<ng-container *ngFor="let shortcut of shortcuts">
-  <p>Area: {{ shortcut.area }}</p>
-  <p>Title: {{ shortcut.title }}</p>
-  <p>Shortcut: {{ shortcut.shortcut }}</p>
-  <p>Description: {{ shortcut.description }}</p>
-  <p>Information: {{ shortcut.information }}</p>
-  <p>Tags: {{ shortcut.tags }}</p>
-  <hr />
+<h2 class="text-xl">General</h2>
+<hr />
+<ng-container *ngFor="let shortcut of generalShortcuts">
+  <p>{{ shortcut.title }}</p>
+  <div class="flex flex-row gap-2">
+    <ng-container *ngFor="let shortcut of shortcut.shortcut; let last = last">
+      <kbd>{{ shortcut }}</kbd>
+      <span *ngIf="!last"> + </span>
+    </ng-container>
+  </div>
+  <div class="flex flex-row gap-2">
+    <p *ngFor="let desc of shortcut.description">{{ desc }}</p>
+  </div>
+  <div class="flex flex-row gap-2">
+    <p *ngFor="let info of shortcut.information">{{ info }}</p>
+  </div>
+  <div class="flex flex-row gap-2">
+    <p
+      *ngFor="let tag of shortcut.tags"
+      class="bg-blue-100 rounded-full w-fit px-4 py-1">
+      {{ tag }}
+    </p>
+  </div>
+</ng-container>
+
+<h2>Edit Mode</h2>
+<hr />
+<ng-container *ngFor="let shortcut of editModeShortcuts">
+  <p>{{ shortcut.title }}</p>
+  <div class="flex flex-row gap-2">
+    <ng-container *ngFor="let shortcut of shortcut.shortcut; let last = last">
+      <kbd>{{ shortcut }}</kbd>
+      <span *ngIf="!last"> + </span>
+    </ng-container>
+  </div>
+  <div class="flex flex-row gap-2">
+    <p *ngFor="let desc of shortcut.description">{{ desc }}</p>
+  </div>
+  <div class="flex flex-row gap-2">
+    <p *ngFor="let info of shortcut.information">{{ info }}</p>
+  </div>
+  <div class="flex flex-row gap-2">
+    <p
+      *ngFor="let tag of shortcut.tags"
+      class="bg-blue-100 rounded-full w-fit px-4 py-1">
+      {{ tag }}
+    </p>
+  </div>
 </ng-container>
