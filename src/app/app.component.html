@@ -20,11 +20,9 @@
     <p *ngFor="let info of shortcut.information">{{ info }}</p>
   </div>
   <div class="flex flex-row gap-2">
-    <p
-      *ngFor="let tag of shortcut.tags"
-      class="bg-blue-100 rounded-full w-fit px-4 py-1">
+    <app-tag *ngFor="let tag of shortcut.tags">
       {{ tag }}
-    </p>
+    </app-tag>
   </div>
 </ng-container>
 
@@ -45,10 +43,8 @@
     <p *ngFor="let info of shortcut.information">{{ info }}</p>
   </div>
   <div class="flex flex-row gap-2">
-    <p
-      *ngFor="let tag of shortcut.tags"
-      class="bg-blue-100 rounded-full w-fit px-4 py-1">
+    <app-tag *ngFor="let tag of shortcut.tags">
       {{ tag }}
-    </p>
+    </app-tag>
   </div>
 </ng-container>

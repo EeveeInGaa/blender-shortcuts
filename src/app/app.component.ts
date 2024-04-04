@@ -4,11 +4,12 @@ import { BlenderShortcuts } from './util/interfaces/blender-shortcuts.interface'
 import { SearchComponent } from './ui/search/search.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TagComponent } from './ui/tag/tag.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterModule, SearchComponent],
+  imports: [CommonModule, RouterModule, SearchComponent, TagComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
