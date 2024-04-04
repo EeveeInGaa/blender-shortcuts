@@ -1,15 +1,25 @@
 <app-card>
   <div class="card">
     <div class="flex items-center gap-5">
-      <h3>Relocate selected to center</h3>
-      <kbd>Ctrl + Tab</kbd>
+      <h3 class="min-w-fit">{{ data.title }}</h3>
+      <div class="flex flex-row gap-2 min-w-fit">
+        <ng-container *ngFor="let shortcut of data.shortcut; let last = last">
+          <kbd>{{ shortcut }}</kbd>
+          <span *ngIf="!last"> + </span>
+        </ng-container>
+      </div>
     </div>
     <app-separator></app-separator>
-    <p>Relocate selected to center</p>
-    <p>some infos</p>
-    <div class="flex gap-2 pt-2">
-      <app-tag>relocate</app-tag>
-      <app-tag>center</app-tag>
+    <div class="flex flex-row gap-2">
+      <p *ngFor="let desc of data.description">{{ desc }}</p>
+    </div>
+    <div class="flex flex-row gap-2">
+      <p *ngFor="let info of data.information">{{ info }}</p>
+    </div>
+    <div class="flex flex-row gap-2 pt-3">
+      <app-tag *ngFor="let tag of data.tags">
+        {{ tag }}
+      </app-tag>
     </div>
   </div>
 </app-card>

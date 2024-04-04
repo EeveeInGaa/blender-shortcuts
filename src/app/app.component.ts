@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { TagComponent } from './ui/tag/tag.component';
 import { CardComponent } from './ui/card/card.component';
 import { ShortcutCardComponent } from './ui/shortcut-card/shortcut-card.component';
+import { SeparatorComponent } from './ui/separator/separator.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { ShortcutCardComponent } from './ui/shortcut-card/shortcut-card.componen
     TagComponent,
     CardComponent,
     ShortcutCardComponent,
+    SeparatorComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],

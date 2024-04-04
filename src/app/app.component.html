@@ -5,48 +5,18 @@
 
 <main>
   <h2 class="text-xl">General</h2>
-  <hr />
-  <ng-container *ngFor="let shortcut of generalShortcuts">
-    <p>{{ shortcut.title }}</p>
-    <div class="flex flex-row gap-2">
-      <ng-container *ngFor="let shortcut of shortcut.shortcut; let last = last">
-        <kbd>{{ shortcut }}</kbd>
-        <span *ngIf="!last"> + </span>
-      </ng-container>
-    </div>
-    <div class="flex flex-row gap-2">
-      <p *ngFor="let desc of shortcut.description">{{ desc }}</p>
-    </div>
-    <div class="flex flex-row gap-2">
-      <p *ngFor="let info of shortcut.information">{{ info }}</p>
-    </div>
-    <div class="flex flex-row gap-2">
-      <app-tag *ngFor="let tag of shortcut.tags">
-        {{ tag }}
-      </app-tag>
-    </div>
-  </ng-container>
+  <app-separator></app-separator>
+  <div class="flex flex-wrap gap-10">
+    <ng-container *ngFor="let generalShortcut of generalShortcuts">
+      <app-shortcut-card [data]="generalShortcut"></app-shortcut-card>
+    </ng-container>
+  </div>
 
   <h2>Edit Mode</h2>
-  <hr />
-  <ng-container *ngFor="let shortcut of editModeShortcuts">
-    <p>{{ shortcut.title }}</p>
-    <div class="flex flex-row gap-2">
-      <ng-container *ngFor="let shortcut of shortcut.shortcut; let last = last">
-        <kbd>{{ shortcut }}</kbd>
-        <span *ngIf="!last"> + </span>
-      </ng-container>
-    </div>
-    <div class="flex flex-row gap-2">
-      <p *ngFor="let desc of shortcut.description">{{ desc }}</p>
-    </div>
-    <div class="flex flex-row gap-2">
-      <p *ngFor="let info of shortcut.information">{{ info }}</p>
-    </div>
-    <div class="flex flex-row gap-2">
-      <app-tag *ngFor="let tag of shortcut.tags">
-        {{ tag }}
-      </app-tag>
-    </div>
-  </ng-container>
+  <app-separator></app-separator>
+  <div class="flex flex-wrap gap-10">
+    <ng-container *ngFor="let editModeShortcut of editModeShortcuts">
+      <app-shortcut-card [data]="editModeShortcut"></app-shortcut-card>
+    </ng-container>
+  </div>
 </main>
