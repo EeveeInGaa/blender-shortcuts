@@ -9,8 +9,9 @@ I plan to enhance and refine it over time (see below), I just wanted to make it 
 ## TODOs
 ### bigger (enhance)
 - Search
-- better component structure 
 - Dark Mode
+- better component structure 
+- mobile version
 - Apple Shortcuts 
 - English Localization
 - Filtering (not just headlines but hoppers at the top that show only selected)
