@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply overflow-y-scroll min-h-full w-full h-full bg-[#f3f4f6];
+  font-size: 100%;
+}
+
 body {
-  @apply bg-[#f3f4f6];
+  @apply min-h-full h-full;
 }
 
 :host {
@@ -25,3 +30,9 @@ h3 {
 kbd {
   @apply bg-gray-100 rounded font-medium px-2 py-0.5 w-fit font-mono;
 }
+
+.container {
+  @apply ml-auto mr-auto px-4 w-full;
+}
+
+
