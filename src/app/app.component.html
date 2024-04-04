@@ -3,17 +3,15 @@
   <app-search></app-search>
 </header>
 
-<main class="grow container">
-  <h2 class="text-xl">General</h2>
-  <app-separator></app-separator>
+<main class="grow container pb-16">
+  <app-heading>General</app-heading>
   <div class="flex flex-wrap gap-10">
     <ng-container *ngFor="let generalShortcut of generalShortcuts">
       <app-shortcut-card [data]="generalShortcut"></app-shortcut-card>
     </ng-container>
   </div>
 
-  <h2>Edit Mode</h2>
-  <app-separator></app-separator>
+  <app-heading>Edit Mode</app-heading>
   <div class="flex flex-wrap gap-10">
     <ng-container *ngFor="let editModeShortcut of editModeShortcuts">
       <app-shortcut-card [data]="editModeShortcut"></app-shortcut-card>
