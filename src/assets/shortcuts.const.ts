@@ -57,7 +57,7 @@ export const generalShortcuts: BlenderShortcuts[] = [
     title: 'Quick Favorites',
     shortcut: ['Q'],
     description: ['Open Menu to quickly access favorite actions'],
-    information: ['You can add them by ...'],
+    information: ['You can add them by ...', 'yehaa'],
     tags: ['menu', 'favorite'],
   },
   {

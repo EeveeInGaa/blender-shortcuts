@@ -1,5 +1,5 @@
 <app-card>
-  <div class="card">
+  <div class="card" *ngIf="data">
     <div class="flex items-center gap-5">
       <h3 class="min-w-fit">{{ data.title }}</h3>
       <div class="flex flex-row gap-2 min-w-fit">
@@ -10,16 +10,29 @@
       </div>
     </div>
     <app-separator></app-separator>
-    <div class="flex flex-row gap-2">
-      <p *ngFor="let desc of data.description">{{ desc }}</p>
-    </div>
-    <div class="flex flex-row gap-2">
-      <p *ngFor="let info of data.information">{{ info }}</p>
-    </div>
-    <div class="flex flex-row gap-2 pt-3">
-      <app-tag *ngFor="let tag of data.tags">
-        {{ tag }}
-      </app-tag>
+    <div class="flex flex-col gap-2">
+      <div class="flex flex-row gap-2">
+        <p *ngFor="let desc of data.description">{{ desc }}</p>
+      </div>
+      <div
+        class="flex gap-2 text-sm"
+        [ngClass]="{
+          'ml-3': data.information!.length > 0
+        }">
+        <!--[ngClass]="{
+          'px-4 py-1 ml-3 border border-blue-700 rounded-lg':
+            data.information!.length > 0
+        }"-->
+        <div class="text-blue-700" *ngIf="data.information!.length > 0">ⓘ</div>
+        <div class="flex flex-col gap-2">
+          <p *ngFor="let info of data.information">· {{ info }}</p>
+        </div>
+      </div>
+      <div class="flex flex-row gap-2 mt-1">
+        <app-tag *ngFor="let tag of data.tags">
+          {{ tag }}
+        </app-tag>
+      </div>
     </div>
   </div>
 </app-card>
