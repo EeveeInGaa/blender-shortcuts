@@ -10,11 +10,12 @@
       </div>
     </div>
     <app-separator></app-separator>
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-4">
       <div class="flex flex-row gap-2">
         <p *ngFor="let desc of data.description">{{ desc }}</p>
       </div>
       <div
+        *ngIf="data.information!.length > 0"
         class="flex gap-2 text-sm"
         [ngClass]="{
           'ml-3': data.information!.length > 0
