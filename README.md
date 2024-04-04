@@ -24,4 +24,5 @@ I plan to enhance and refine it over time (see below), I just wanted to make it 
 - configure tailwind custom classes 
 - refine spacings/font sizes/styles etc.
 - use the structural card
+- add grid columns
 - data structure
