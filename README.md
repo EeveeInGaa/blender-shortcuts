@@ -1,27 +1,27 @@
 # BlenderShortcuts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.8.
+This is one quick and small page because I was tired of always googling for a Blender Shortcut.
+Shortcuts that I find useful are collected in here in case I forget them to quickly find them again.
+It will grow over time.
 
-## Development server
+I plan to enhance and refine it over time (see below), I just wanted to make it work quickly now.  
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## TODOs
+### bigger (enhance)
+- Search
+- better component structure 
+- Dark Mode
+- Apple Shortcuts 
+- English Localization
+- Filtering (not just headlines but hoppers at the top that show only selected)
+- Favs (+ local storage)
+- Export as PDF
+- Approaches (fold along an edge, cutting a hole etc.)
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### smaller and quality (refine)
+- change units to relative units 
+- use better semantics
+- configure tailwind custom classes 
+- refine spacings/font sizes/styles etc.
+- use the structural card
+- data structure
