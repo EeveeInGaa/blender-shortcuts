@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TagComponent } from './ui/tag/tag.component';
 import { CardComponent } from './ui/card/card.component';
+import { ShortcutCardComponent } from './ui/shortcut-card/shortcut-card.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { CardComponent } from './ui/card/card.component';
     SearchComponent,
     TagComponent,
     CardComponent,
+    ShortcutCardComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
