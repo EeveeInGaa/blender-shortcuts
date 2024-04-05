@@ -1,8 +1,9 @@
 :host {
   @apply block;
 }
+
 .card {
-  @apply flex flex-col flex-grow bg-white rounded-xl p-6;
+  @apply flex flex-col flex-grow bg-white rounded-xl p-6 w-full;
 
   box-shadow: 0 10px 15px -10px rgba(0,0,0,0.1);
 }

@@ -1,6 +1,6 @@
 <app-card>
   <div class="card" *ngIf="data">
-    <div class="flex items-center gap-5">
+    <div class="flex items-center flex-wrap gap-x-5 gap-y-2">
       <h3 class="min-w-fit">{{ data.title }}</h3>
       <div class="flex flex-row gap-2 min-w-fit">
         <ng-container *ngFor="let shortcut of data.shortcut; let last = last">
