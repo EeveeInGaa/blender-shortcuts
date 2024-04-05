@@ -1,21 +1,30 @@
-<header
-  class="container flex items-center gap-10 border border-gray-400 rounded-3xl mt-4">
-  <img class="w-44" src="assets/blender-shortcuts-logo.svg" alt="Logo" />
-  <app-search></app-search>
+<header class="container mt-4">
+  <div
+    class="border border-gray-400 rounded-2xl sm:rounded-3xl flex items-center gap-5 sm:gap-10 pr-4">
+    <img
+      class="w-24 sm:w-32 md:w-44"
+      src="assets/blender-shortcuts-logo.svg"
+      alt="Logo" />
+    <app-search class="flex-grow sm:flex-grow-0"></app-search>
+  </div>
 </header>
 
 <main class="grow container pb-16">
   <app-heading>General</app-heading>
-  <div class="flex flex-wrap gap-10">
+  <div class="flex flex-wrap gap-6 sm:gap-10">
     <ng-container *ngFor="let generalShortcut of generalShortcuts">
-      <app-shortcut-card [data]="generalShortcut"></app-shortcut-card>
+      <app-shortcut-card
+        class="w-full sm:w-fit"
+        [data]="generalShortcut"></app-shortcut-card>
     </ng-container>
   </div>
 
   <app-heading>Edit Mode</app-heading>
-  <div class="flex flex-wrap gap-10">
+  <div class="flex flex-wrap gap-6 sm:gap-10">
     <ng-container *ngFor="let editModeShortcut of editModeShortcuts">
-      <app-shortcut-card [data]="editModeShortcut"></app-shortcut-card>
+      <app-shortcut-card
+        class="w-full sm:w-fit"
+        [data]="editModeShortcut"></app-shortcut-card>
     </ng-container>
   </div>
 </main>
