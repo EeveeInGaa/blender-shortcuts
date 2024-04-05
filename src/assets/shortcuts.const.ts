@@ -63,7 +63,7 @@ export const generalShortcuts: BlenderShortcuts[] = [
   {
     area: [BlenderArea.General],
     title: 'Orbit around Object',
-    shortcut: ['Middle Mouse'],
+    shortcut: ['Click Middle Mouse'],
     description: ['Orbit around an selected object'],
     information: [],
     tags: ['view', 'viewport', 'orbit'],
@@ -72,8 +72,8 @@ export const generalShortcuts: BlenderShortcuts[] = [
     area: [BlenderArea.General],
     title: 'Move Viewport around',
     shortcut: ['⇧', 'Middle Mouse'],
-    description: ['Orbit around an selected object'],
-    information: [],
+    description: ['Move the viewport around'],
+    information: ['independent from selection'],
     tags: ['view', 'viewport', 'move'],
   },
   {
@@ -88,7 +88,7 @@ export const generalShortcuts: BlenderShortcuts[] = [
     area: [BlenderArea.General],
     title: 'Viewport to selected',
     shortcut: ['. (Numpad)'],
-    description: ['Move Viewport to selected'],
+    description: ['Move Viewport to selected object'],
     information: [],
     tags: ['view', 'viewport', 'selected'],
   },

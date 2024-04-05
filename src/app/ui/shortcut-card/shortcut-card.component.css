@@ -7,3 +7,15 @@
 
   box-shadow: 0 10px 15px -10px rgba(0,0,0,0.1);
 }
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    @apply bg-black;
+
+    box-shadow: 0 10px 15px -10px rgba(255,255,255,0.1);
+  }
+
+  .info {
+    @apply text-blue-300;
+  }
+}

@@ -9,11 +9,11 @@ I plan to enhance and refine it over time (see below), I just wanted to make it 
 ## TODOs
 ### bigger (enhance)
 -[ ] Search
--[ ] Dark Mode
+-[x] ~~Dark Mode~~
 -[ ] better component structure 
 -[x] ~~mobile version~~
 -[ ] Apple Shortcuts 
--[ ] English Localization
+-[ ] German Localization
 -[ ] Filtering (not just headlines but hoppers at the top that show only selected)
 -[ ] Favs (+ local storage)
 -[ ] Export as PDF

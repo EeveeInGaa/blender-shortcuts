@@ -35,4 +35,14 @@ kbd {
   @apply ml-auto mr-auto px-4 w-full;
 }
 
+@media (prefers-color-scheme: dark) {
+  html {
+    @apply bg-[#16181D] text-white;
+  }
+
+  kbd {
+    @apply bg-gray-800;
+  }
+}
+
 

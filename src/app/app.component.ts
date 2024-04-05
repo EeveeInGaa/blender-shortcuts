@@ -9,6 +9,7 @@ import { CardComponent } from './ui/card/card.component';
 import { ShortcutCardComponent } from './ui/shortcut-card/shortcut-card.component';
 import { SeparatorComponent } from './ui/separator/separator.component';
 import { HeadingComponent } from './ui/heading/heading.component';
+import { LogoComponent } from './ui/logo/logo.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { HeadingComponent } from './ui/heading/heading.component';
     ShortcutCardComponent,
     SeparatorComponent,
     HeadingComponent,
+    LogoComponent,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
