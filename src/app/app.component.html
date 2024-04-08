@@ -2,26 +2,50 @@
   <div
     class="border border-gray-400 rounded-2xl sm:rounded-3xl flex items-center gap-5 sm:gap-10 pr-4">
     <app-logo class="w-24 sm:w-32 md:w-44"></app-logo>
-    <app-search class="flex-grow sm:flex-grow-0"></app-search>
+    <app-search
+      (searchChange)="onSearchChange($event)"
+      class="flex-grow sm:flex-grow-0"></app-search>
   </div>
 </header>
 
 <main class="grow container pb-16">
-  <app-heading>General</app-heading>
-  <div class="flex flex-wrap gap-6 sm:gap-10">
-    <ng-container *ngFor="let generalShortcut of generalShortcuts">
-      <app-shortcut-card
-        class="w-full sm:w-fit"
-        [data]="generalShortcut"></app-shortcut-card>
-    </ng-container>
-  </div>
+  <ng-container *ngIf="!isSearchEmpty">
+    <app-heading>Search</app-heading>
+    <div class="flex flex-wrap gap-6 sm:gap-10">
+      <ng-container *ngFor="let item of filteredItems">
+        <app-shortcut-card
+          class="w-full sm:w-fit"
+          [data]="item"></app-shortcut-card>
+      </ng-container>
+      <ng-container *ngIf="filteredItems.length === 0"
+        ><p>
+          Unfortunately no Shortcut could be found for
+          <mark>{{ searchTerm }}</mark
+          >. It may need to be added, does not exist or is written wrongly.
+          <br />
+          <b>Try searching for something else.</b>
+        </p></ng-container
+      >
+    </div>
+  </ng-container>
 
-  <app-heading>Edit Mode</app-heading>
-  <div class="flex flex-wrap gap-6 sm:gap-10">
-    <ng-container *ngFor="let editModeShortcut of editModeShortcuts">
-      <app-shortcut-card
-        class="w-full sm:w-fit"
-        [data]="editModeShortcut"></app-shortcut-card>
-    </ng-container>
-  </div>
+  <ng-container *ngIf="isSearchEmpty">
+    <app-heading>General</app-heading>
+    <div class="flex flex-wrap gap-6 sm:gap-10">
+      <ng-container *ngFor="let generalShortcut of generalShortcuts">
+        <app-shortcut-card
+          class="w-full sm:w-fit"
+          [data]="generalShortcut"></app-shortcut-card>
+      </ng-container>
+    </div>
+
+    <app-heading>Edit Mode</app-heading>
+    <div class="flex flex-wrap gap-6 sm:gap-10">
+      <ng-container *ngFor="let editModeShortcut of editModeShortcuts">
+        <app-shortcut-card
+          class="w-full sm:w-fit"
+          [data]="editModeShortcut"></app-shortcut-card>
+      </ng-container>
+    </div>
+  </ng-container>
 </main>

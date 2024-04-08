@@ -31,6 +31,10 @@ kbd {
   @apply bg-gray-100 rounded font-medium px-2 py-0.5 w-fit font-mono;
 }
 
+mark {
+  @apply font-mono bg-transparent;
+}
+
 .container {
   @apply ml-auto mr-auto px-4 w-full;
 }
@@ -43,6 +47,10 @@ kbd {
   kbd {
     @apply bg-gray-800;
   }
+
+   mark {
+     @apply text-white;
+   }
 }
 
 

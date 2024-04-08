@@ -1,1 +1,7 @@
-<input placeholder="Search" class="rounded-xl w-full sm:w-52" />
+<!--TODO: add label-->
+<input
+  placeholder="Search"
+  type="text"
+  [(ngModel)]="searchTerm"
+  (input)="onSearchChange()"
+  class="rounded-xl w-full sm:w-52" />

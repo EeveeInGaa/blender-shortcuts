@@ -8,22 +8,23 @@ I plan to enhance and refine it over time (see below), I just wanted to make it 
 
 ## TODOs
 ### bigger (enhance)
--[ ] Search
--[x] ~~Dark Mode~~
--[ ] better component structure 
--[x] ~~mobile version~~
--[ ] Apple Shortcuts 
--[ ] German Localization
--[ ] Filtering (not just headlines but hoppers at the top that show only selected)
--[ ] Favs (+ local storage)
--[ ] Export as PDF
--[ ] Approaches (fold along an edge, cutting a hole etc.)
+- [x] Search
+- [x] Dark Mode
+- [x] mobile version
+- [ ] better component structure 
+- [ ] Apple Shortcuts 
+- [ ] German Localization
+- [ ] Filtering (not just headlines but hoppers at the top that show only selected)
+- [ ] Favs (+ local storage)
+- [ ] Export as PDF
+- [ ] Approaches (fold along an edge, cutting a hole etc.)
+- [ ] add tests (search, favs, filtering)
 
 ### smaller and quality (refine)
--[ ] change units to relative units 
--[ ] use better semantics
--[ ] configure tailwind custom classes 
--[ ] refine spacings/font sizes/styles etc.
--[ ] use the structural card
--[ ] add grid columns
--[ ] data structure
+- [ ] change units to relative units 
+- [ ] use better semantics
+- [ ] configure tailwind custom classes 
+- [ ] refine spacings/font sizes/styles etc.
+- [ ] use the structural card
+- [ ] add grid columns
+- [ ] data structure

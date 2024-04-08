@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
 })
-export class SearchComponent {}
+export class SearchComponent {
+  searchTerm: string = '';
+  @Output() searchChange: EventEmitter<string> = new EventEmitter<string>();
+
+  onSearchChange() {
+    this.searchChange.emit(this.searchTerm);
+  }
+}

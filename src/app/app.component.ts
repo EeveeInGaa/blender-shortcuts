@@ -31,8 +31,44 @@ import { LogoComponent } from './ui/logo/logo.component';
 export class AppComponent {
   generalShortcuts: BlenderShortcuts[] = [];
   editModeShortcuts: BlenderShortcuts[] = [];
+  mergedItems: BlenderShortcuts[] = [];
+
+  filteredItems: BlenderShortcuts[] = [];
+
+  searchTerm = '';
+  isSearchEmpty = true;
   constructor(private readonly shortcutsService: ShortcutsService) {
     this.generalShortcuts = this.shortcutsService.getGeneralShortcuts();
     this.editModeShortcuts = this.shortcutsService.getEditModeShortcuts();
+
+    this.mergedItems = [...this.generalShortcuts, ...this.editModeShortcuts];
+  }
+
+  onSearchChange(searchTerm: string) {
+    this.searchTerm = searchTerm;
+
+    if (!this.searchTerm) {
+      this.isSearchEmpty = true;
+      return;
+    }
+
+    this.isSearchEmpty = false;
+    this.filteredItems = this.mergedItems.filter(item => {
+      return (
+        item.title!.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        item.shortcut!.some(desc =>
+          desc.toLowerCase().includes(this.searchTerm.toLowerCase())
+        ) ||
+        item.description.some(desc =>
+          desc.toLowerCase().includes(this.searchTerm.toLowerCase())
+        ) ||
+        item.information!.some(desc =>
+          desc.toLowerCase().includes(this.searchTerm.toLowerCase())
+        ) ||
+        item.tags!.some(desc =>
+          desc.toLowerCase().includes(this.searchTerm.toLowerCase())
+        )
+      );
+    });
   }
 }
